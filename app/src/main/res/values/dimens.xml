@@ -1,0 +1,9 @@
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="text_titulo">40sp</dimen>
+    <dimen name="lista_height">100dp</dimen>
+    <dimen name="cardView_medida">200dp</dimen>
+    <dimen name="card_height">350dp</dimen>
+    <dimen name="card_titulo">20sp</dimen>
+</resources>
