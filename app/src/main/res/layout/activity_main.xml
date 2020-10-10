@@ -1,110 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@color/colorFondo"
     tools:context=".MainActivity">
 
     <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/rvAnimales"
+        app:layout_constraintStart_toStartOf="parent">
 
-        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-
-            android:id="@+id/swiperefresh"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/lista_height"
-            >
-            <ListView
-                android:id="@+id/lstMilista"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/lista_height" />
-
-
-        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
-
-
-        <TextView
-            android:id="@+id/tvTitulo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/texto_titulo"
-            android:textSize="@dimen/text_titulo"
-            android:textStyle="bold"
-            android:layout_below="@id/swiperefresh"
-            />
-
-        <Button
-            android:id="@+id/btnMiBoton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tvTitulo"
-            android:text="@string/texto_boton_click"
-            android:theme="@style/MiBotonRaised"
-            />
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/btnMiBoton"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
-
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:layout_marginEnd="@dimen/activity_vertical_margin"
-            android:layout_marginRight="@dimen/activity_horizontal_margin"
-            android:layout_marginBottom="@dimen/activity_vertical_margin"
-            android:src="@android:drawable/btn_star"
-            />
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="@dimen/cardView_medida"
-            android:layout_height="@dimen/card_height"
-            android:layout_below="@id/fab"
-            card_view:cardCornerRadius="4dp"
-            >
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <ImageView
-                    android:id="@+id/imgImagen"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/cardView_medida"
-                    android:src="@drawable/pikachu"
-                    android:scaleType="centerCrop"
-                    android:contentDescription="@string/descripcion_imagen" />
-                <TextView
-                    android:id="@+id/tvTituloTarjeta"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/titulo_tarjeta"
-                    android:layout_below="@id/imgImagen"
-                    android:textStyle="bold"
-                    android:textSize="@dimen/card_titulo"
-
-                    />
-                <TextView
-                    android:id="@+id/tvDescripcionTarjeta"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/descripcion_tarjeta"
-                    android:layout_below="@id/tvTituloTarjeta"
-                    android:gravity="center_horizontal"
-                    />
-            </RelativeLayout>
-
-        </androidx.cardview.widget.CardView>
-
-
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/cv_btn_width"
+            android:layout_height="@dimen/cv_btn_height"
+            android:src="@drawable/huella" />
     </RelativeLayout>
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAnimales"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="40dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@+id/rvAnimales"
+        app:layout_constraintEnd_toEndOf="@+id/rvAnimales"
+        app:srcCompat="@drawable/ic_baseline_photo_camera_24"
+        tools:ignore="VectorDrawableCompat" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

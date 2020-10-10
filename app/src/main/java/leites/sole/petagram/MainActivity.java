@@ -1,73 +1,71 @@
 package leites.sole.petagram;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
-import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.widget.Adapter;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.Toast;
+import android.view.Menu;
+import android.view.MenuItem;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    SwipeRefreshLayout swiperefresh;
-    ListView lstMilista;
-    Adapter adaptador;
+    ArrayList<Mascotas> mascotas;
+    private RecyclerView rvAnimales;
+    public MascotaAdaptador adaptador;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        agregarFAV();
 
-        swiperefresh = (SwipeRefreshLayout) findViewById(R.id.swiperefresh);
-        lstMilista = (ListView) findViewById(R.id.lstMilista);
+        rvAnimales = (RecyclerView) findViewById(R.id.rvAnimales);
 
-        String[] planetas = getResources().getStringArray(R.array.planetas);
+        LinearLayoutManager llm = new LinearLayoutManager(this);
+        llm.setOrientation(LinearLayoutManager.VERTICAL);
 
-        lstMilista.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, planetas));
-
-        swiperefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-            @Override
-            public void onRefresh() {
-                refrescandoContenido();
-            }
-        });
-    }
-
-    public void refrescandoContenido(){
-        String[] planetas = getResources().getStringArray(R.array.planetas);
-        lstMilista.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, planetas));
-        swiperefresh.setRefreshing(false);
+        rvAnimales.setLayoutManager(llm);
+        inicializarListaContactos();
+        inicializarAdaptador();
 
     }
 
-    public void agregarFAV() {
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+    public void inicializarAdaptador(){
+        MascotaAdaptador adaptador = new MascotaAdaptador(mascotas, this);
+        rvAnimales.setAdapter(adaptador);
+    }
 
-            @Override
-            public void onClick(View view) {
-                //Toast.makeText(getBaseContext(), getResources().getString(R.string.mensaje), Toast.LENGTH_SHORT).show();
-                Snackbar.make(view, getResources().getString(R.string.mensaje), Snackbar.LENGTH_LONG)
-                        .setAction(getResources().getString(R.string.texto_accion), new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
+    public void inicializarListaContactos(){
 
-                            }
-                        })
-                        .setActionTextColor(getResources().getColorStateList(R.color.colorPrimary))
-                        .setBackgroundTintList(getResources().getColorStateList(R.color.colorAccent))
-                        .show();
-                }
+        mascotas = new ArrayList<Mascotas>();
 
-        });
+        mascotas.add(new Mascotas("Lolo", "2", R.drawable.tuki));
+        mascotas.add(new Mascotas("Eugenia","9", R.drawable.turtle));
+        mascotas.add(new Mascotas("Fernan", "6", R.drawable.cangre));
+        mascotas.add(new Mascotas("Georgia","1", R.drawable.pez));
+        mascotas.add(new Mascotas("Helgua", "7", R.drawable.polarpolls));
+        mascotas.add(new Mascotas("Pipi", "12", R.drawable.pajaro));
+        mascotas.add(new Mascotas("Moyo", "14", R.drawable.oveja));
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.estrellita:
+                Intent intent = new Intent(this, cincoFavoritos.class);
+                startActivity(intent);
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

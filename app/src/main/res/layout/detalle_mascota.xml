@@ -1,9 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".DetalleMascota">
+<androidx.appcompat.widget.LinearLayoutCompat
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+tools:context=".DetalleMascota"
+    >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<include android:id="@+id/miToolbar"
+    layout="@layout/actionbar"></include>
+
+<androidx.appcompat.widget.AppCompatImageView
+    android:id="@+id/imagen"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/imagen_height"
+    android:layout_gravity="center"
+    android:src="@drawable/cangre"/>
+
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="@dimen/top"
+    android:layout_margin="@dimen/margen"
+    >
+
+    <ImageView
+        android:id="@+id/imgvHuesoBlanco"
+        android:layout_width="@android:dimen/app_icon_size"
+        android:layout_height="@android:dimen/app_icon_size"
+        android:src="@drawable/hueso_blanco"
+        />
+
+    <TextView
+        android:id="@+id/tvHuesoBlanco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/start"
+        android:layout_gravity="center_vertical"
+        android:text="@string/nombre"
+        android:textSize="@dimen/fav"
+        />
+
+    <TextView
+        android:id="@+id/tvHuesoAmarillo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/marginLeft_huesoAmarillo"
+        android:layout_gravity="center_vertical"
+        android:text="@string/favorito"
+        android:textSize="@dimen/fav"
+        />
+
+    <ImageView
+        android:id="@+id/imgvHuesoAmarillo"
+        android:layout_width="@android:dimen/app_icon_size"
+        android:layout_height="@android:dimen/app_icon_size"
+        android:src="@drawable/hueso_amarillo"
+        />
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

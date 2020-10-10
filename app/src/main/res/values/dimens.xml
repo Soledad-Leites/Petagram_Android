@@ -1,9 +1,17 @@
 <resources>
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
-    <dimen name="text_titulo">40sp</dimen>
-    <dimen name="lista_height">100dp</dimen>
-    <dimen name="cardView_medida">200dp</dimen>
-    <dimen name="card_height">350dp</dimen>
-    <dimen name="card_titulo">20sp</dimen>
+    <dimen name="nombre_mascota">35sp</dimen>
+    <dimen name="fav">20sp</dimen>
+    <dimen name="top">15dp</dimen>
+    <dimen name="start">15dp</dimen>
+    <dimen name="margen">10dp</dimen>
+    <dimen name="margen_vertical">16dp</dimen>
+    <dimen name="margen_horizontal">16dp</dimen>
+    <dimen name="elevacion_actionbar">4dp</dimen>
+    <dimen name="corner_radius_cv">4dp</dimen>
+    <dimen name="nombre_cardview">20sp</dimen>
+    <dimen name="padding_cardview">10dp</dimen>
+    <dimen name="cv_btn_width">38dp</dimen>
+    <dimen name="cv_btn_height">38dp</dimen>
+    <dimen name="marginLeft_huesoAmarillo">90dp</dimen>
+    <dimen name="imagen_height">250dp</dimen>
 </resources>

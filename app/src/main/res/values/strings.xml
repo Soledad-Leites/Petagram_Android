@@ -1,18 +1,10 @@
 <resources>
-    <string name="app_name">Petagram</string>
-    <string name="texto_boton_click">Click</string>
-    <string name="texto_titulo">Puppy</string>
-    <string name="mensaje">Favorito</string>
-    <string name="texto_accion">Accion</string>
-    <string-array name="planetas">
-        <item>Mercurio</item>
-        <item>Venus</item>
-        <item>Tierra</item>
-        <item>Marte</item>
-        <item>Jupiter</item>
-    </string-array>
+    <string name="app_name">Petagram (Sole)</string>
+    <string name="nombre">Animal</string>
+    <string name="favorito">3</string>
+    <string name="pnombre">nombre</string>
+    <string name="pfavorito">favorito</string>
+    <string name="menu"> </string>
+    <string name="star">star</string>
 
-    <string name="titulo_tarjeta">Pikachu</string>
-    <string name="descripcion_tarjeta">El pokemon preferido por todos.</string>
-    <string name="descripcion_imagen">pokemon pikachu</string>
 </resources>
