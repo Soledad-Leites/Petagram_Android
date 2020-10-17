@@ -13,10 +13,7 @@
         app:layout_constraintBottom_toTopOf="@+id/rvFavoritos"
         app:layout_constraintStart_toStartOf="parent">
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="@dimen/cv_btn_width"
-            android:layout_height="@dimen/cv_btn_height"
-            android:src="@drawable/huella" />
+
     </RelativeLayout>
 
     <androidx.recyclerview.widget.RecyclerView

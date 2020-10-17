@@ -18,7 +18,10 @@ card_view:cardCornerRadius="@dimen/corner_radius_cv"
         android:id="@+id/imgFoto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/cangre" />
+        android:src="@drawable/cangre"
+
+        />
+
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
@@ -59,6 +62,7 @@ card_view:cardCornerRadius="@dimen/corner_radius_cv"
             android:layout_width="@android:dimen/app_icon_size"
             android:layout_height="@android:dimen/app_icon_size"
             android:src="@drawable/hueso_amarillo"
+            android:layout_marginLeft="@dimen/start"
             />
 
     </androidx.appcompat.widget.LinearLayoutCompat>

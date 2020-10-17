@@ -1,7 +1,6 @@
-package leites.sole.petagram;
+package leites.sole.petagram.adapter;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,14 +14,19 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+import leites.sole.petagram.pojo.Mascotas;
+import leites.sole.petagram.R;
+
 public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.MascotaViewHolder>{
 
     ArrayList<Mascotas> mascotas;
+   //
     Activity activity;
 
     public MascotaAdaptador(ArrayList<Mascotas> mascotas, Activity activity){ //METODO CONSTRUCTOR
         this.mascotas = mascotas;
         this.activity = activity;
+        //this.foto = foto;
     }
 
     @NonNull
@@ -31,6 +35,8 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.listado_mascotas, parent, false);
         return new MascotaViewHolder(v);
     }
+
+   /* */
 
     @Override //ASOCIA CADA ELEMENTO DE LA LISTA CON CADA VIEW
     public void onBindViewHolder(@NonNull final MascotaViewHolder mascotaViewHolder, int position) {
@@ -80,4 +86,13 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
 
         }
     }
+
+   /* public static class FotoViewHolder extends RecyclerView.ViewHolder{
+        private AppCompatTextView tvHuesoBlanco;
+
+
+        public FotoViewHolder(@NonNull View itemView) {
+            super(itemView);
+        }
+    }*/
 }

@@ -14,25 +14,5 @@
         app:layout_constraintTop_toTopOf="parent"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="@dimen/cv_btn_width"
-        android:layout_height="?android:actionBarSize"
-        android:layout_gravity="start"
-        android:background="@color/colorPrimary"
-        android:src="@drawable/huella"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <!--<androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/estrella"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end"
-        android:background="@color/colorPrimary"
-        android:onClick="estrella"
-        android:src="@drawable/estrella5"
-        app:layout_constraintEnd_toEndOf="@+id/miToolbar"
-        app:layout_constraintTop_toTopOf="parent"
-        />-->
 
 </androidx.appcompat.widget.Toolbar>

@@ -1,4 +1,4 @@
-package leites.sole.petagram;
+package leites.sole.petagram.pojo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,6 +11,11 @@ public class Mascotas {
 
     public Mascotas(String nombre, String favorito, int imagen) {
         this.nombre = nombre;
+        this.favorito = favorito;
+        this.imagen = imagen;
+    }
+
+    public Mascotas(String favorito, int imagen){
         this.favorito = favorito;
         this.imagen = imagen;
     }

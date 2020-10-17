@@ -4,12 +4,18 @@
     <item
         android:id="@+id/estrellita"
         android:title="@string/star"
-        android:icon="@drawable/estrella5"
+        android:icon="@drawable/ic_baseline_star_half_24"
         app:showAsAction="always"
         />
     <item
-        android:title="@string/menu"
-
+        android:id="@+id/contacto"
+        android:title="@string/contacto"
+        android:orderInCategory="501"
+        />
+    <item
+        android:id="@+id/acercaDe"
+        android:title="@string/acerca_de"
+        android:orderInCategory="502"
         />
 
 </menu>

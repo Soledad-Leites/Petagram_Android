@@ -1,10 +1,20 @@
 <resources>
-    <string name="app_name">Petagram (Sole)</string>
+    <string name="app_name">Petagram de Sole</string>
     <string name="nombre">Animal</string>
     <string name="favorito">3</string>
     <string name="pnombre">nombre</string>
     <string name="pfavorito">favorito</string>
-    <string name="menu"> </string>
+    <string name="contacto">Contacto</string>
+    <string name="acerca_de">Acerca de</string>
+    <string name="acerca_de_contenido">
+        Proyecto creado por Soledad,
+        realizado como tarea para presentar a los compañeros de curso.\n\n
+        Que tengas un buen dia!</string>
     <string name="star">star</string>
+    <string name="nombre_formulario">Ingrese su Nombre</string>
+    <string name="mail_formulario">Ingrese su E-mail</string>
+    <string name="comen_formulario">Aquí su Comentario</string>
+    <string name="btn_enviar_comentario">ENVIAR COMENTARIO</string>
+    <string name="nombre_oveja">Moyo</string>
 
 </resources>
